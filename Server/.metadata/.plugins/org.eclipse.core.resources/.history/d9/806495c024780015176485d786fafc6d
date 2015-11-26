@@ -1,0 +1,127 @@
+package database;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
+
+public class DataBaseBasic {
+	private static Connection conn = null;
+	/** The name of the MySQL account to use*/
+	private final String userName = "root";
+
+	/** The password for the MySQL account*/
+	private final String password = "anil123";
+
+	/** The name of the computer running MySQL */
+	private final String serverName = "localhost";
+
+	/** The port of the MySQL server (default is 3306) */
+	private final int portNumber = 3306;
+
+	/** The name of the database.*/
+	private final String dbName = "dt";
+	
+	/** The name of the table we are creating */
+	private final String tableNameAutomobile = "Automobile";
+	private final String tableNameProperties = "PropertiesAuto";
+
+	public static Connection getConn() {
+		return conn;
+	}
+
+	public static void setConn(Connection conn) {
+		DataBaseBasic.conn = conn;
+	}
+	
+	public String getUserName() {
+		return userName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public String getServerName() {
+		return serverName;
+	}
+
+	public int getPortNumber() {
+		return portNumber;
+	}
+
+	public String getDbName() {
+		return dbName;
+	}
+
+	public String getTableNameAutomobile() {
+		return tableNameAutomobile;
+	}
+
+	public String getTableNameProperties() {
+		return tableNameProperties;
+	}
+	
+	public Connection getConnection() throws SQLException {
+		Connection conn = null;
+		Properties connectionProps = new Properties();
+		connectionProps.put("user", this.userName);
+		connectionProps.put("password", this.password);
+
+		conn = DriverManager.getConnection("jdbc:mysql://"
+				+ this.serverName + ":" + this.portNumber + "/" + this.dbName,
+				connectionProps);
+
+		return conn;
+	}
+
+	public boolean executeUpdate(Connection conn, String command) throws SQLException {
+	    Statement stmt = null;
+	    try {
+	        stmt = conn.createStatement();
+	        stmt.executeUpdate(command); // This will throw a SQLException if it fails
+	        return true;
+	    } finally {
+
+	    	// This will run whether we throw an exception or not
+	        if (stmt != null) { stmt.close(); }
+	    }
+	}
+	
+	public void createTable() {
+		// Create Automobile table
+		DeleteDB d = new DeleteDB();
+		d.deleteTable();
+		try {
+		    String createString =
+			        "CREATE TABLE " + this.tableNameAutomobile + " ( " +
+			        "MAKE_MODEL varchar(40) NOT NULL, " +
+			        "BASE_PRICE varchar(40) NOT NULL, " +
+			        "PRIMARY KEY (MAKE_MODEL))";
+			this.executeUpdate(conn, createString);
+			System.out.println("Created Automobile table");
+	    } catch (SQLException e) {
+			System.out.println("ERROR: Could not create the Automobile table");
+			e.printStackTrace();
+			return;
+		}
+	 // Create Properties table
+		try {
+		    String createString =
+			        "CREATE TABLE " + this.tableNameProperties + " ( " +
+			        "MAKE_MODEL varchar(40) NOT NULL, " +
+			        "OPTION_SET_NAME varchar(100) NOT NULL, " +
+			        "OPTION_NAME varchar(1024) NOT NULL, " +
+			        "OPTION_PRICE varchar(100) NOT NULL, " +
+			        "PRIMARY KEY (OPTION_SET_NAME))";
+			this.executeUpdate(conn, createString);
+			System.out.println("Created Properties table");
+	    } catch (SQLException e) {
+			System.out.println("ERROR: Could not create Properties table");
+			e.printStackTrace();
+			return;
+		}
+	}
+	
+}

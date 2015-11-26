@@ -1,0 +1,46 @@
+package database;
+
+import java.sql.SQLException;
+
+public class EditDB extends Thread{
+	private DataBaseBasic db;
+	
+	public EditDB(){
+		/*Connect to database*/
+		db = new DataBaseBasic();
+		try {
+			db.setConn(db.getConnection());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		/*Create table*/
+		db.createTable();
+	}
+	/*Overriding run method*/
+	public void run() {
+		while(true) {
+			/*Print car*/
+			PrintAuto p = new PrintAuto();
+			p.printAutomobile("'FordZTW'");
+			/*Update car*/
+			UpdateAuto u = new UpdateAuto();
+			u.updateMakeName("'FordZTW'", "'TeslaS'");
+			u.updateBasePrice("'TeslaS'", "'50000'");
+			u.updateOptionSetName("'TeslaS'", "'Color'", "'Life'");
+			u.updateOptionName("'TeslaS'", "'Life'", "Red", "Gold");
+			u.updateOptionPrice("'TeslaS'", "'Life'", "Gold", "100");
+			p.printAutomobile("'TeslaS'");
+			/*Delete db*/
+			System.out.println("After deleting");
+			DeleteDB db = new DeleteDB();
+			db.deleteOption("'TeslaS'", "'Life'", "Blue");
+			p.printAutomobile("'TeslaS'");
+			db.deleteOptionSet("'TeslaS'", "'Life'");
+			p.printAutomobile("'TeslaS'");
+			db.deleteCarRecord("'TeslaS'");
+			p.printAutomobile("'TeslaS'");
+			db.deleteTable();
+		}
+	}
+}

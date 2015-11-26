@@ -1,0 +1,169 @@
+package database;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
+import java.util.StringTokenizer;
+
+import model.Automobile;
+
+public class ReadAutoToAutomobile {
+	private DataBaseBasic d;
+	
+	public ReadAutoToAutomobile() {
+		d = new DataBaseBasic();
+	}
+	
+	public Automobile readAutomobile(String makeModel, Automobile a1) {
+		String sql = "SELECT MAKE_MODEL, BASE_PRICE FROM "+d.getTableNameAutomobile() +
+					 " where MAKE_MODEL="+ makeModel;
+		try {
+		Statement stmt = d.getConn().createStatement();
+		ResultSet rs = stmt.executeQuery(sql);
+		 while(rs.next()){
+		    //Retrieve by column name
+			 a1.setMake(rs.getString("MAKE_MODEL"));
+			 a1.setBasePrice(Float.parseFloat(rs.getString("BASE_PRICE")));
+		 }
+		 rs.close();
+		} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		} 
+		
+		sql = "SELECT OPTION_SET_NAME, OPTION_NAME, OPTION_PRICE FROM "+d.getTableNameProperties() +
+		 " where MAKE_MODEL="+ makeModel;
+		try {
+			Statement stmt = d.getConn().createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			int i = 0;
+			while(rs.next()){
+				//Retrieve by column name
+				a1.setOptionSetName(rs.getString("OPTION_SET_NAME"), i);
+				String option = rs.getString("OPTION_NAME");
+				String price = rs.getString("OPTION_PRICE");
+				StringTokenizer st1 = new StringTokenizer(option,":");
+		        StringTokenizer st2 = new StringTokenizer(price,":");
+		        int j = 0;
+		         while(st1.hasMoreTokens() && st2.hasMoreTokens()) {
+		        	 a1.setOptionName(st1.nextToken(), j, i);
+		        	 a1.setOptionPrice(Float.parseFloat(st2.nextToken()), j, i);
+		        	 j++;
+		         }
+		         i++;
+		      }
+			rs.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
+		return a1;
+	}
+	
+	public Automobile parsePropertiesObject(Properties props, Automobile a1) {
+		String valueAuto = "";
+		String valueProp = "";
+		AddCarRecord add = new AddCarRecord();
+		
+		valueAuto = "'"+props.getProperty("CarModel")+props.getProperty("CarMake")+"'"+
+					"'"+props.getProperty("BasePrice")+"'";
+		
+		add.addAutomobile(valueAuto, valueProp);
+		a1.setMake(props.getProperty("CarMake"));
+		if(!a1.getMake().equals(null)) {
+			a1.setModel(props.getProperty("CarModel"));
+			a1.setBasePrice(Float.parseFloat(props.getProperty("BasePrice")));
+			/*Option Color*/
+			a1.addOptionSet();
+			a1.setOptionSetName(props.getProperty("Option1"), 0);
+			if(props.getProperty("Option1").equals(null)) {}
+			else {
+				a1.addOption(0);
+				a1.setOptionName(props.getProperty("OptionValue1a"), 0, 0);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice1a")), 0, 0);
+				a1.addOption(0);
+				a1.setOptionName(props.getProperty("OptionValue1b"), 1, 0);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice1b")), 1, 0);
+				a1.addOption(0);
+				a1.setOptionName(props.getProperty("OptionValue1c"), 2, 0);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice1c")), 2, 0);
+				a1.addOption(0);
+				a1.setOptionName(props.getProperty("OptionValue1d"), 3, 0);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice1d")), 3, 0);
+				a1.addOption(0);
+				a1.setOptionName(props.getProperty("OptionValue1e"), 4, 0);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice1e")), 4, 0);
+				a1.addOption(0);
+				a1.setOptionName(props.getProperty("OptionValue1f"), 5, 0);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice1f")), 5, 0);
+				a1.addOption(0);
+				a1.setOptionName(props.getProperty("OptionValue1g"), 6, 0);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice1g")), 6, 0);
+				a1.addOption(0);
+				a1.setOptionName(props.getProperty("OptionValue1h"), 7, 0);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice1h")), 7, 0);
+				a1.addOption(0);
+				a1.setOptionName(props.getProperty("OptionValue1i"), 8, 0);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice1i")), 8, 0);
+				a1.addOption(0);
+				a1.setOptionName(props.getProperty("OptionValue1j"), 9, 0);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice1j")), 9, 0);
+			}
+			/*Option Transmission*/
+			a1.addOptionSet();
+			a1.setOptionSetName(props.getProperty("Option2"), 1);
+			if(props.getProperty("Option2").equals(null)) {}
+			else {
+				a1.addOption(1);
+				a1.setOptionName(props.getProperty("OptionValue2a"), 0, 1);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice2a")), 0, 1);
+				a1.addOption(1);
+				a1.setOptionName(props.getProperty("OptionValue2b"), 1, 1);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice2b")), 1, 1);
+			}
+			/*Brakes*/
+			a1.addOptionSet();
+			a1.setOptionSetName(props.getProperty("Option3"), 2);
+			if(props.getProperty("Option3").equals(null)) {}
+			else {
+				a1.addOption(2);
+				a1.setOptionName(props.getProperty("OptionValue3a"), 0, 2);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice3a")), 0, 2);
+				a1.addOption(2);
+				a1.setOptionName(props.getProperty("OptionValue3b"), 1, 2);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice3b")), 1, 2);
+				a1.addOption(2);
+				a1.setOptionName(props.getProperty("OptionValue3c"), 2, 2);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice3c")), 2, 2);
+			}
+			/*Side Impact*/
+			a1.addOptionSet();
+			a1.setOptionSetName(props.getProperty("Option4"), 3);
+			if(props.getProperty("Option4").equals(null)) {}
+			else {
+				a1.addOption(3);
+				a1.setOptionName(props.getProperty("OptionValue4a"), 0, 3);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice4a")), 0, 3);
+				a1.addOption(3);
+				a1.setOptionName(props.getProperty("OptionValue4b"), 1, 3);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice4b")), 1, 3);
+			}
+			/*Power Moonroof*/
+			a1.addOptionSet();
+			a1.setOptionSetName(props.getProperty("Option5"), 4);
+			if(props.getProperty("Option5").equals(null)) {}
+			else {
+				a1.addOption(4);
+				a1.setOptionName(props.getProperty("OptionValue5a"), 0, 4);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice5a")), 0, 4);
+				a1.addOption(4);
+				a1.setOptionName(props.getProperty("OptionValue5b"), 1, 4);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice5b")), 1, 4);
+			}
+		}
+		else {/*Do nothing*/}
+		return a1;
+	}
+}

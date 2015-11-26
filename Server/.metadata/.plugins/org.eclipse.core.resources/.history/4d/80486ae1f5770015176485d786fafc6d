@@ -1,0 +1,8 @@
+package database;
+
+public class EditDB extends Thread{
+	/*Overriding run method*/
+	public void run() {
+		
+	}
+}

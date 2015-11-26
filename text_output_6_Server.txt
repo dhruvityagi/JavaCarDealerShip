@@ -1,0 +1,342 @@
+Created Automobile table
+Created Properties table
+Do you want to display cars available in the record:Yes or No
+--------------------------------------------------------
+Make:Tesla
+Model:Model X
+Base Price:50000.0
+--------------------------------------------------------
+Printing properties:
+--------------------------------------------------------
+Optionset:Color-
+	Fort Knox Gold Clearcoat Metallic @ $0.0
+	Liquid Grey Clearcoat Metallic @ $0.0
+	Infra-Red Clearcoat @ $0.0
+	Grabber Green Clearcoat Metallic @ $0.0
+	Sangria Red Clearcoat Metallic @ $0.0
+	French Blue Clearcoat Metallic @ $0.0
+	Twilight Blue Clearcoat Metallic @ $0.0
+	CD Silver Clearcoat Metallic @ $0.0
+	Pitch Black Clearcoat @ $0.0
+	Cloud 9 White Clearcoat @ $0.0
+========================================================
+Optionset:Transmission-
+	Manual @ $-815.0
+	Automatic @ $0.0
+========================================================
+Optionset:Brakes-
+	Standard @ $0.0
+	ABS @ $400.0
+	ABS with Advnce Trac @ $1625.0
+========================================================
+Optionset:Side Impact Air Bags-
+	Present @ $350.0
+	Not Present @ $0.0
+========================================================
+Optionset:Power Moonroof-
+	Present @ $595.0
+	Not Present @ $0.0
+========================================================
+Price of automobile: $50000.0
+--------------------------------------------------------
+Make:Ford
+Model:ZTW
+Base Price:18445.0
+--------------------------------------------------------
+Printing properties:
+--------------------------------------------------------
+Optionset:Color-
+	Fort Knox Gold Clearcoat Metallic @ $0.0
+	Liquid Grey Clearcoat Metallic @ $0.0
+	Infra-Red Clearcoat @ $0.0
+	Grabber Green Clearcoat Metallic @ $0.0
+	Sangria Red Clearcoat Metallic @ $0.0
+	French Blue Clearcoat Metallic @ $0.0
+	Twilight Blue Clearcoat Metallic @ $0.0
+	CD Silver Clearcoat Metallic @ $0.0
+	Pitch Black Clearcoat @ $0.0
+	Cloud 9 White Clearcoat @ $0.0
+========================================================
+Optionset:Transmission-
+	Manual @ $-815.0
+	Automatic @ $0.0
+========================================================
+Optionset:Brakes-
+	Standard @ $0.0
+	ABS @ $400.0
+	ABS with Advnce Trac @ $1625.0
+========================================================
+Optionset:Side Impact Air Bags-
+	Present @ $350.0
+	Not Present @ $0.0
+========================================================
+Optionset:Power Moonroof-
+	Present @ $595.0
+	Not Present @ $0.0
+========================================================
+Price of automobile: $18445.0
+Yes
+Make/Model Records in DB:
+Model XTesla
+ZTWFord
+Do you want to change Make/Model of the car:Yes or No
+Yes
+Enter Old Car Name:
+Model XTesla
+Enter New Car Name:
+Model YTesla
+Make/Model:Model YTesla
+Base Price:50000
+Option Set Name:Color
+Fort Knox Gold Clearcoat Metallic @ 0
+Liquid Grey Clearcoat Metallic @ 0
+Infra-Red Clearcoat @ 0
+Grabber Green Clearcoat Metallic @ 0
+Sangria Red Clearcoat Metallic @ 0
+French Blue Clearcoat Metallic @ 0
+Twilight Blue Clearcoat Metallic @ 0
+CD Silver Clearcoat Metallic @ 0
+Pitch Black Clearcoat @ 0
+Cloud 9 White Clearcoat @ 0
+Option Set Name:Transmission
+Manual @ -815
+Automatic @ 0
+Option Set Name:Brakes
+Standard @ 0
+ABS @ 400
+ABS with Advnce Trac @ 1625
+Option Set Name:Side Impact Air Bags
+Present @ 350
+Not Present @ 0
+Option Set Name:Power Moonroof
+Present @ 595
+Not Present @ 0
+Do you want to change Base Price of the car:Yes or No
+Yes
+Enter Car Name:
+Model YTesla
+Enter New Base Price:
+80000
+Make/Model:Model YTesla
+Base Price:80000
+Option Set Name:Color
+Fort Knox Gold Clearcoat Metallic @ 0
+Liquid Grey Clearcoat Metallic @ 0
+Infra-Red Clearcoat @ 0
+Grabber Green Clearcoat Metallic @ 0
+Sangria Red Clearcoat Metallic @ 0
+French Blue Clearcoat Metallic @ 0
+Twilight Blue Clearcoat Metallic @ 0
+CD Silver Clearcoat Metallic @ 0
+Pitch Black Clearcoat @ 0
+Cloud 9 White Clearcoat @ 0
+Option Set Name:Transmission
+Manual @ -815
+Automatic @ 0
+Option Set Name:Brakes
+Standard @ 0
+ABS @ 400
+ABS with Advnce Trac @ 1625
+Option Set Name:Side Impact Air Bags
+Present @ 350
+Not Present @ 0
+Option Set Name:Power Moonroof
+Present @ 595
+Not Present @ 0
+Do you want to see Properties of a car:Yes or No
+Yes
+Enter Car Name:
+ZTWFord
+Properties availbale for car ZTWFord in DB:
+Color
+Transmission
+Brakes
+Side Impact Air Bags
+Power Moonroof
+Do you want to change Option Set name for a given car: Yes or No
+Yes
+Enter Car Name:
+ZTWFord
+Enter Old OptionSet Name:
+Color
+Enter New OptionSet Name:
+Life
+Make/Model:ZTWFord
+Base Price:18445
+Option Set Name:Life
+Fort Knox Gold Clearcoat Metallic @ 0
+Liquid Grey Clearcoat Metallic @ 0
+Infra-Red Clearcoat @ 0
+Grabber Green Clearcoat Metallic @ 0
+Sangria Red Clearcoat Metallic @ 0
+French Blue Clearcoat Metallic @ 0
+Twilight Blue Clearcoat Metallic @ 0
+CD Silver Clearcoat Metallic @ 0
+Pitch Black Clearcoat @ 0
+Cloud 9 White Clearcoat @ 0
+Option Set Name:Transmission
+Manual @ -815
+Automatic @ 0
+Option Set Name:Brakes
+Standard @ 0
+ABS @ 400
+ABS with Advnce Trac @ 1625
+Option Set Name:Side Impact Air Bags
+Present @ 350
+Not Present @ 0
+Option Set Name:Power Moonroof
+Present @ 595
+Not Present @ 0
+Do you want to see Options of a given OptionSet in car:Yes or No
+Yes
+Enter Car Name:
+ZTWFord
+Enter Optionset Name:
+Life
+Properties availbale for car ZTWFord in DB:
+Fort Knox Gold Clearcoat Metallic @ 0
+Liquid Grey Clearcoat Metallic @ 0
+Infra-Red Clearcoat @ 0
+Grabber Green Clearcoat Metallic @ 0
+Sangria Red Clearcoat Metallic @ 0
+French Blue Clearcoat Metallic @ 0
+Twilight Blue Clearcoat Metallic @ 0
+CD Silver Clearcoat Metallic @ 0
+Pitch Black Clearcoat @ 0
+Cloud 9 White Clearcoat @ 0
+Do you want to change Option name for a given car and OptionSet: Yes or No
+Yes
+Enter Car Name:
+ZTWFord
+Enter OptionSet Name:
+Life
+Enter Old Option Name:
+Cloud 9 White Clearcoat
+Enter New Option Name:
+Blue
+Make/Model:ZTWFord
+Base Price:18445
+Option Set Name:Life
+Fort Knox Gold Clearcoat Metallic @ 0
+Liquid Grey Clearcoat Metallic @ 0
+Infra-Red Clearcoat @ 0
+Grabber Green Clearcoat Metallic @ 0
+Sangria Red Clearcoat Metallic @ 0
+French Blue Clearcoat Metallic @ 0
+Twilight Blue Clearcoat Metallic @ 0
+CD Silver Clearcoat Metallic @ 0
+Pitch Black Clearcoat @ 0
+Blue @ 0
+Option Set Name:Transmission
+Manual @ -815
+Automatic @ 0
+Option Set Name:Brakes
+Standard @ 0
+ABS @ 400
+ABS with Advnce Trac @ 1625
+Option Set Name:Side Impact Air Bags
+Present @ 350
+Not Present @ 0
+Option Set Name:Power Moonroof
+Present @ 595
+Not Present @ 0
+Do you want to change Option price for a given car,OptionSet and Option: Yes or No
+Yes
+Enter Car Name:
+ZTWFord
+Enter OptionSet Name:
+Life
+Enter Option Name:
+Blue
+Enter New Price:
+100
+Make/Model:ZTWFord
+Base Price:18445
+Option Set Name:Life
+Fort Knox Gold Clearcoat Metallic @ 0
+Liquid Grey Clearcoat Metallic @ 0
+Infra-Red Clearcoat @ 0
+Grabber Green Clearcoat Metallic @ 0
+Sangria Red Clearcoat Metallic @ 0
+French Blue Clearcoat Metallic @ 0
+Twilight Blue Clearcoat Metallic @ 0
+CD Silver Clearcoat Metallic @ 0
+Pitch Black Clearcoat @ 0
+Blue @ 100
+Option Set Name:Transmission
+Manual @ -815
+Automatic @ 0
+Option Set Name:Brakes
+Standard @ 0
+ABS @ 400
+ABS with Advnce Trac @ 1625
+Option Set Name:Side Impact Air Bags
+Present @ 350
+Not Present @ 0
+Option Set Name:Power Moonroof
+Present @ 595
+Not Present @ 0
+Do you want to delete Option for a given car,OptionSet: Yes or No
+Yes
+Enter Car Name:
+Model YTesla
+Enter OptionSet Name:
+Color
+Enter Option Name:
+Fort Knox Gold Clearcoat Metallic
+Make/Model:Model YTesla
+Base Price:80000
+Option Set Name:Color
+Liquid Grey Clearcoat Metallic @ 0
+Infra-Red Clearcoat @ 0
+Grabber Green Clearcoat Metallic @ 0
+Sangria Red Clearcoat Metallic @ 0
+French Blue Clearcoat Metallic @ 0
+Twilight Blue Clearcoat Metallic @ 0
+CD Silver Clearcoat Metallic @ 0
+Pitch Black Clearcoat @ 0
+Cloud 9 White Clearcoat @ 0
+Option Set Name:Transmission
+Manual @ -815
+Automatic @ 0
+Option Set Name:Brakes
+Standard @ 0
+ABS @ 400
+ABS with Advnce Trac @ 1625
+Option Set Name:Side Impact Air Bags
+Present @ 350
+Not Present @ 0
+Option Set Name:Power Moonroof
+Present @ 595
+Not Present @ 0
+Do you want to delete OptionSet for a given car: Yes or No
+Yes
+Enter Car Name:
+ZTWFord
+Enter OptionSet Name:
+Life
+Make/Model:ZTWFord
+Base Price:18445
+Option Set Name:Transmission
+Manual @ -815
+Automatic @ 0
+Option Set Name:Brakes
+Standard @ 0
+ABS @ 400
+ABS with Advnce Trac @ 1625
+Option Set Name:Side Impact Air Bags
+Present @ 350
+Not Present @ 0
+Option Set Name:Power Moonroof
+Present @ 595
+Not Present @ 0
+Do you want to delete a car record: Yes or No
+Yes
+Enter Car Name:
+ZTWFord
+Do you want to delete all car record: Yes or No
+No
+Do you want to display cars available in the record:Yes or No
+YEs
+Make/Model Records in DB:
+Model YTesla

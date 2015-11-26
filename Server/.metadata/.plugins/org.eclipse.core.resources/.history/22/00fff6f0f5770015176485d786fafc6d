@@ -1,0 +1,12 @@
+package database;
+
+public class EditDB extends Thread{
+	privtae DataBaseBasic db = new DataBaseBasic();
+	public EditDB(){
+		
+	}
+	/*Overriding run method*/
+	public void run() {
+		
+	}
+}

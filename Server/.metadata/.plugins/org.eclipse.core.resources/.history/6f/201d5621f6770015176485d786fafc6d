@@ -1,0 +1,8 @@
+package server;
+
+public class ClientInteraction extends Thread{
+	/*Overriding run method*/
+	public void run() {
+		
+	}
+}

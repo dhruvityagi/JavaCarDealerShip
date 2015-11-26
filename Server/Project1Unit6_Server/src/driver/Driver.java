@@ -1,0 +1,55 @@
+package driver;
+
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.sql.SQLException;
+
+import database.DataBaseBasic;
+import database.EditDB;
+
+import adapter.BuildAuto;
+import server.ClientInteraction;
+import server.DefaultSocketServer;
+import server.ServerAuto;
+
+/*Driver class
+ * Contains main*/
+public class Driver {
+	public static void main(String args[]) {
+						
+		ClientInteraction c = new ClientInteraction();
+		c.start();
+		EditDB e = new EditDB();
+		e.start();
+		
+//		EditOptions e1 = new EditOptions();
+//		EditOptions e2 = new EditOptions();
+//				
+//		/*Set the values*/
+//		e1.editOptionAC("Ford","ZTW","Color", "Fort Knox Gold Clearcoat Metallic",
+//						"Metallic Red");
+//		e2.editOptionAC("Ford","ZTW","Color", "Fort Knox Gold Clearcoat Metallic",
+//						"Metallic Green");
+//		/*Start the threads*/
+//		e1.start();
+//		e2.start();
+//		/*boolean e1IsAlive = true;
+//		boolean e2IsAlive = true;
+//		do {
+//			if(e1IsAlive && e1.isAlive()) {
+//				e1IsAlive = false;
+//				System.out.println("e1 is dead");
+//			}
+//			else {
+//				System.out.println("e1 is alive");
+//			}
+//			if(e2IsAlive && e2.isAlive()) {
+//				e2IsAlive = false;
+//				System.out.println("e2 is dead");
+//			}
+//			else {
+//				System.out.println("e2 is alive");
+//			}	
+//		}while (e1IsAlive || e1IsAlive);*/
+	}
+}

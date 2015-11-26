@@ -1,0 +1,60 @@
+package database;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class AddCarRecord {
+	private DataBaseBasic d;
+	
+	public AddCarRecord() {
+		d = new DataBaseBasic();
+	}
+	
+	public void addAutomobile(String valueAuto, String valueProp, String make) {
+		String queryCheck = "SELECT * from " + d.getTableNameAutomobile()+
+							" where MAKE_MODEL = '"+make+"'";
+        Statement st = null;
+		try {
+			st = d.getConn().createStatement();
+		} catch (SQLException e3) {
+			// TODO Auto-generated catch block
+			e3.printStackTrace();
+		}
+        ResultSet rs = null;
+		try {
+			rs = st.executeQuery(queryCheck);
+			try {
+				if(rs.absolute(1)) {
+				    /*Do nothing*/
+				}
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		} catch (SQLException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		} // execute the query, and get a java resultset
+        // if this ID already exists, we quit
+        
+		 String sqlAuto = "INSERT INTO " + d.getTableNameAutomobile()+ 
+        				  " VALUES (" + valueAuto + ")";
+		 //System.out.println(sqlAuto);
+		 try {
+			d.executeUpdate(d.getConn(), sqlAuto);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String sqlProp = "INSERT INTO "+d.getTableNameProperties()+ 
+		 				 " VALUES (" + valueProp + ")";
+		//System.out.println(sqlProp);
+		try {
+			d.executeUpdate(d.getConn(), sqlProp);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

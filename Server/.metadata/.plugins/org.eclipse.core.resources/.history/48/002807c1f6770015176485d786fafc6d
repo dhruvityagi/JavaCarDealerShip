@@ -1,0 +1,26 @@
+package database;
+
+import java.sql.SQLException;
+
+public class EditDB extends Thread{
+	private DataBaseBasic db;
+	
+	public EditDB(){
+		/*Connect to database*/
+		db = new DataBaseBasic();
+		try {
+			db.setConn(db.getConnection());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		/*Create table*/
+		db.createTable();
+	}
+	/*Overriding run method*/
+	public void run() {
+		while(true) {
+			
+		}
+	}
+}

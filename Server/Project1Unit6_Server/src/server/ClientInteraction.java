@@ -1,0 +1,11 @@
+package server;
+
+public class ClientInteraction extends Thread{
+	DefaultSocketServer d = new DefaultSocketServer(); 
+	/*Overriding run method*/
+	public void run() {
+		while(true) {
+			d.start();
+		}
+	}
+}

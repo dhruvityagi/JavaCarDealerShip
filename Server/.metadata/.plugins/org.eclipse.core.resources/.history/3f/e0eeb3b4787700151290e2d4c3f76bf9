@@ -1,0 +1,163 @@
+package database;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Properties;
+import java.util.StringTokenizer;
+
+import model.Automobile;
+
+public class ReadAutoToAutomobile {
+	private DataBaseBasic d;
+	
+	public ReadAutoToAutomobile() {
+		d = new DataBaseBasic();
+	}
+	
+	public Automobile readAutomobile(String makeModel, Automobile a1) {
+		String sql = "SELECT MAKE_MODEL, BASE_PRICE FROM "+d.getTableNameAutomobile() +
+					 " where MAKE_MODEL="+ makeModel;
+		try {
+		Statement stmt = d.getConn().createStatement();
+		ResultSet rs = stmt.executeQuery(sql);
+		 while(rs.next()){
+		    //Retrieve by column name
+			 a1.setMake(rs.getString("MAKE_MODEL"));
+			 a1.setBasePrice(Float.parseFloat(rs.getString("BASE_PRICE")));
+		 }
+		 rs.close();
+		} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		} 
+		
+		sql = "SELECT OPTION_SET_NAME, OPTION_NAME, OPTION_PRICE FROM "+d.getTableNameProperties() +
+		 " where MAKE_MODEL="+ makeModel;
+		try {
+			Statement stmt = d.getConn().createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			int i = 0;
+			while(rs.next()){
+				//Retrieve by column name
+				a1.setOptionSetName(rs.getString("OPTION_SET_NAME"), i);
+				String option = rs.getString("OPTION_NAME");
+				String price = rs.getString("OPTION_PRICE");
+				StringTokenizer st1 = new StringTokenizer(option,":");
+		        StringTokenizer st2 = new StringTokenizer(price,":");
+		        int j = 0;
+		         while(st1.hasMoreTokens() && st2.hasMoreTokens()) {
+		        	 a1.setOptionName(st1.nextToken(), j, i);
+		        	 a1.setOptionPrice(Float.parseFloat(st2.nextToken()), j, i);
+		        	 j++;
+		         }
+		         i++;
+		      }
+			rs.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		
+		return a1;
+	}
+	
+	public Automobile parsePropertiesObject(Properties props, Automobile a1) {
+		String valueAuto = "";
+		String valueProp = "";
+		AddCarRecord add = new AddCarRecord();
+		"'FordZTW','Color','Red:Blue:Green','0:0:0'"
+		valueAuto = "'"+props.getProperty("CarModel")+props.getProperty("CarMake")+"'"+
+					"'"+props.getProperty("BasePrice")+"'";
+		
+		valueProp = "'"+props.getProperty("CarModel")+props.getProperty("CarMake")+"'"+
+					"'"+props.getProperty("Option1")+"'"+
+					"'"+props.getProperty("OptionValue1a")+":"+
+						props.getProperty("OptionValue1b")+":"+
+						props.getProperty("OptionValue1c")+":"+
+						props.getProperty("OptionValue1d")+":"+
+						props.getProperty("OptionValue1e")+":"+
+						props.getProperty("OptionValue1f")+":"+
+						props.getProperty("OptionValue1g")+":"+
+						props.getProperty("OptionValue1h")+":"+
+						props.getProperty("OptionValue1i")+":"+
+						props.getProperty("OptionValue1j")+"'"+
+					"'"+props.getProperty("OptionPrice1a")+":"+
+						props.getProperty("OptionPrice1b")+":"+
+						props.getProperty("OptionPrice1c")+":"+
+						props.getProperty("OptionPrice1d")+":"+
+						props.getProperty("OptionPrice1e")+":"+
+						props.getProperty("OptionPrice1f")+":"+
+						props.getProperty("OptionPrice1g")+":"+
+						props.getProperty("OptionPrice1h")+":"+
+						props.getProperty("OptionPrice1i")+":"+
+						props.getProperty("OptionPrice1j")+"'";
+		add.addAutomobile(valueAuto, valueProp);
+		valueAuto = "'"+props.getProperty("CarModel")+props.getProperty("CarMake")+"'"+
+		"'"+props.getProperty("BasePrice")+"'";
+
+valueProp = "'"+props.getProperty("CarModel")+props.getProperty("CarMake")+"'"+
+		"'"+props.getProperty("Option2")+"'"+
+		"'"+props.getProperty("OptionValue2a")+":"+
+			props.getProperty("OptionValue2b")+"'"+
+		"'"+props.getProperty("OptionPrice2a")+":"+
+			props.getProperty("OptionPrice2b")+"'";
+		add.addAutomobile(valueAuto, valueProp);
+		
+		if(!a1.getMake().equals(null)) {
+			/*Option Transmission*/
+			a1.addOptionSet();
+			a1.setOptionSetName(props.getProperty("Option2"), 1);
+			if(props.getProperty("Option2").equals(null)) {}
+			else {
+				a1.addOption(1);
+				a1.setOptionName(props.getProperty("OptionValue2a"), 0, 1);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice2a")), 0, 1);
+				a1.addOption(1);
+				a1.setOptionName(props.getProperty("OptionValue2b"), 1, 1);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice2b")), 1, 1);
+			}
+			/*Brakes*/
+			a1.addOptionSet();
+			a1.setOptionSetName(props.getProperty("Option3"), 2);
+			if(props.getProperty("Option3").equals(null)) {}
+			else {
+				a1.addOption(2);
+				a1.setOptionName(props.getProperty("OptionValue3a"), 0, 2);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice3a")), 0, 2);
+				a1.addOption(2);
+				a1.setOptionName(props.getProperty("OptionValue3b"), 1, 2);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice3b")), 1, 2);
+				a1.addOption(2);
+				a1.setOptionName(props.getProperty("OptionValue3c"), 2, 2);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice3c")), 2, 2);
+			}
+			/*Side Impact*/
+			a1.addOptionSet();
+			a1.setOptionSetName(props.getProperty("Option4"), 3);
+			if(props.getProperty("Option4").equals(null)) {}
+			else {
+				a1.addOption(3);
+				a1.setOptionName(props.getProperty("OptionValue4a"), 0, 3);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice4a")), 0, 3);
+				a1.addOption(3);
+				a1.setOptionName(props.getProperty("OptionValue4b"), 1, 3);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice4b")), 1, 3);
+			}
+			/*Power Moonroof*/
+			a1.addOptionSet();
+			a1.setOptionSetName(props.getProperty("Option5"), 4);
+			if(props.getProperty("Option5").equals(null)) {}
+			else {
+				a1.addOption(4);
+				a1.setOptionName(props.getProperty("OptionValue5a"), 0, 4);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice5a")), 0, 4);
+				a1.addOption(4);
+				a1.setOptionName(props.getProperty("OptionValue5b"), 1, 4);
+				a1.setOptionPrice(Float.parseFloat(props.getProperty("OptionPrice5b")), 1, 4);
+			}
+		}
+		else {/*Do nothing*/}
+		return a1;
+	}
+}

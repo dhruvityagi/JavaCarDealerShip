@@ -1,0 +1,54 @@
+package database;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class AddCarRecord {
+	private DataBaseBasic d;
+	
+	public AddCarRecord() {
+		d = new DataBaseBasic();
+	}
+	
+	public void addAutomobile(String valueAuto, String valueProp, String car) {
+		String sql = "SELECT MAKE_MODEL "+d.getTableNameAutomobile() +
+		 			 " where MAKE_MODEL='"+ car;
+		try {
+		Statement stmt = d.getConn().createStatement();
+		ResultSet rs = stmt.executeQuery(sql);
+		while(rs.absolute(1)){
+			//Retrieve by column name
+			String name = rs.getString("OPTION_NAME");
+			String price = rs.getString("OPTION_PRICE");
+			System.out.println(name+" @ "+price);
+		}
+		rs.close();
+		} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		} 
+		
+		
+		
+		
+		 String sqlAuto = "INSERT INTO " + d.getTableNameAutomobile()+ 
+        				  " VALUES (" + valueAuto + ")";
+		 //System.out.println(sqlAuto);
+		 try {
+			d.executeUpdate(d.getConn(), sqlAuto);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String sqlProp = "INSERT INTO "+d.getTableNameProperties()+ 
+		 				 " VALUES (" + valueProp + ")";
+		//System.out.println(sqlProp);
+		try {
+			d.executeUpdate(d.getConn(), sqlProp);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

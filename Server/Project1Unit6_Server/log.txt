@@ -1,0 +1,133 @@
+
+Exception @ line: 1 - Options not entered.@ 09/30/2015 12:07:39
+Exception @ line: 0 - Choice selection aborted-Color number outside range.@ 09/30/2015 12:07:43
+Exception @ line: 1 - Options not entered.@ 09/30/2015 12:13:39
+Exception @ line: 1 - Options not entered.@ 09/30/2015 12:14:39
+Exception @ line: 0 - Choice selection aborted-Color number outside range.@ 09/30/2015 12:14:43
+Exception @ line: 0 - Choice selection aborted-Transmission number outside range.@ 09/30/2015 12:14:45
+Exception @ line: 0 - Choice selection aborted-Brakes/Traction Controls number outside range.@ 09/30/2015 12:14:48
+Exception @ line: 0 - Choice selection aborted-Side Impact Air Bags number outside range.@ 09/30/2015 12:14:52
+Exception @ line: 0 - Choice selection aborted-Power Moonroof number outside range.@ 09/30/2015 12:14:54Exception @ line: 1 - Options not entered.@ 09/30/2015 12:41:53
+Exception - Choice selection aborted-Color number outside range.@ 09/30/2015 12:41:56Exception @ line: 1 - Options not entered.@ 09/30/2015 12:55:08
+Exception - Choice selection aborted-Color number outside range.@ 09/30/2015 12:55:12
+Exception - Choice selection aborted-Transmission number outside range.@ 09/30/2015 12:55:13
+Exception - Choice selection aborted-Brakes/Traction Controls number outside range.@ 09/30/2015 12:55:15
+Exception - Choice selection aborted-Side Impact Air Bags number outside range.@ 09/30/2015 12:55:16
+Exception - Choice selection aborted-Power Moonroof number outside range.@ 09/30/2015 12:55:17Exception @ line: 1 - Options not entered.@ 09/30/2015 12:57:45
+Exception - Choice selection aborted-Color number outside range.@ 09/30/2015 12:57:48
+Exception - Choice selection aborted-Transmission number outside range.@ 09/30/2015 12:57:49
+Exception - Choice selection aborted-Brakes/Traction Controls number outside range.@ 09/30/2015 12:57:50
+Exception - Choice selection aborted-Side Impact Air Bags number outside range.@ 09/30/2015 12:57:51
+Exception - Choice selection aborted-Power Moonroof number outside range.@ 09/30/2015 12:57:52Exception @ line: 1 - Options not entered.@ 09/30/2015 12:58:57Exception @ line: 1 - Options not entered.@ 09/30/2015 13:03:43
+Exception - Choice selection aborted-Color number outside range.@ 09/30/2015 13:03:43Exception @ line: 1 - Options not entered.@ 09/30/2015 13:03:57Exception @ line: 3 - Option price entered is not a number.@ 09/30/2015 13:03:57Exception @ line: 1 - Options not entered.@ 09/30/2015 13:07:14Exception @ line: 3 - Option price entered is not a number.@ 09/30/2015 13:08:06Exception @ line: 1 - Options not entered.@ 09/30/2015 13:08:20Exception @ line: 1 - Options not entered.@ 09/30/2015 13:20:44Exception @ line: 3 - Option price entered is not a number.@ 09/30/2015 13:20:44
+Exception @ line: 1 - Options not entered.@ 09/30/2015 13:24:41
+Exception @ line: 1 - Options not entered.@ 09/30/2015 13:25:17
+Exception @ line: 3 - Option price entered is not a number.@ 09/30/2015 13:25:17
+Exception @ line: 1 - Options not entered.@ 09/30/2015 13:26:18
+Exception @ line: 3 - Option price entered is not a number.@ 09/30/2015 13:26:31
+Exception @ line: 1 - Options not entered.@ 09/30/2015 15:26:53
+Exception @ line: 1 - Options not entered.@ 09/30/2015 15:29:41
+Exception @ line: 1 - Options not entered.@ 09/30/2015 16:40:20
+Exception @ line: 1 - Options not entered.@ 09/30/2015 16:44:16
+Exception @ line: 1 - Options not entered.@ 09/30/2015 16:50:14
+Exception @ line: 1 - Options not entered.@ 09/30/2015 16:51:05
+Exception @ line: 1 - Options not entered.@ 09/30/2015 16:52:05
+Exception @ line: 1 - Options not entered.@ 09/30/2015 16:52:49
+Exception @ line: 1 - Options not entered.@ 09/30/2015 16:57:35
+Exception @ line: 1 - Options not entered.@ 09/30/2015 16:59:44
+Exception @ line: 1 - Options not entered.@ 09/30/2015 16:59:44
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:02:33
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:04:43
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:04:43
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:05:21
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:05:21
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:06:34
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:06:34
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:08:40
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:08:45
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:10:34
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:10:34
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:12:01
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:12:01
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:13:29
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:13:29
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:14:39
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:14:39
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:14:53
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:14:53
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:16:32
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:16:38
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:19:15
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:19:16
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:20:31
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:20:31
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:22:35
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:22:35
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:27:19
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:27:19
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:28:17
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:28:17
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:28:52
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:28:52
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:30:32
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:30:32
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:31:10
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:31:15
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:31:15
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:44:19
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:44:19
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:46:07
+Exception @ line: 1 - Options not entered.@ 09/30/2015 17:46:07
+Exception @ line: 1 - Options not entered.@ 09/30/2015 18:12:03
+Exception @ line: 1 - Options not entered.@ 09/30/2015 18:12:03
+Exception @ line: 1 - Options not entered.@ 09/30/2015 18:16:26
+Exception @ line: 1 - Options not entered.@ 09/30/2015 18:16:26
+Exception @ line: 1 - Options not entered.@ 09/30/2015 18:20:36
+Exception @ line: 1 - Options not entered.@ 09/30/2015 18:20:36
+Exception @ line: 1 - Options not entered.@ 09/30/2015 18:26:04
+Exception @ line: 1 - Options not entered.@ 09/30/2015 18:26:04
+Exception @ line: 1 - Options not entered.@ 09/30/2015 18:27:33
+Exception @ line: 1 - Options not entered.@ 09/30/2015 18:27:36
+Exception @ line: 1 - Options not entered.@ 09/30/2015 18:28:35
+Exception @ line: 1 - Options not entered.@ 09/30/2015 18:28:35
+Exception @ line: 1 - Options not entered.@ 09/30/2015 20:54:29
+Exception @ line: 1 - Options not entered.@ 09/30/2015 20:54:29
+Exception @ line: 1 - Options not entered.@ 09/30/2015 20:58:54
+Exception @ line: 1 - Options not entered.@ 09/30/2015 20:58:54
+Exception @ line: 1 - Options not entered.@ 09/30/2015 21:29:11
+Exception @ line: 1 - Options not entered.@ 09/30/2015 21:29:11
+Exception @ line: 1 - Options not entered.@ 09/30/2015 21:55:20
+Exception @ line: 1 - Options not entered.@ 09/30/2015 21:55:20
+Exception @ line: 1 - Options not entered.@ 09/30/2015 21:55:20
+Exception @ line: 1 - Options not entered.@ 09/30/2015 21:57:00
+Exception @ line: 1 - Options not entered.@ 09/30/2015 21:57:00
+Exception @ line: 1 - Options not entered.@ 09/30/2015 21:57:00
+Exception @ line: 1 - Options not entered.@ 09/30/2015 21:58:50
+Exception @ line: 1 - Options not entered.@ 09/30/2015 21:58:54
+Exception @ line: 1 - Options not entered.@ 09/30/2015 21:58:55
+Exception @ line: 1 - Options not entered.@ 09/30/2015 22:00:20
+Exception @ line: 1 - Options not entered.@ 09/30/2015 22:00:20
+Exception @ line: 1 - Options not entered.@ 09/30/2015 22:00:20
+Exception @ line: 1 - Options not entered.@ 09/30/2015 22:02:56
+Exception @ line: 1 - Options not entered.@ 09/30/2015 22:02:56
+Exception @ line: 1 - Options not entered.@ 09/30/2015 22:02:56
+Exception @ line: 1 - Options not entered.@ 09/30/2015 22:05:08
+Exception @ line: 1 - Options not entered.@ 09/30/2015 22:05:08
+Exception @ line: 1 - Options not entered.@ 09/30/2015 22:05:08
+Exception @ line: 1 - Options not entered.@ 09/30/2015 23:13:12
+Exception @ line: 1 - Options not entered.@ 09/30/2015 23:13:12
+Exception @ line: 1 - Options not entered.@ 09/30/2015 23:13:12
+Exception @ line: 1 - Options not entered.@ 09/30/2015 23:14:25
+Exception @ line: 1 - Options not entered.@ 09/30/2015 23:14:25
+Exception @ line: 1 - Options not entered.@ 10/07/2015 12:02:57
+Exception @ line: 1 - Options not entered.@ 10/07/2015 12:02:57
+Exception @ line: 1 - Options not entered.@ 10/07/2015 12:03:39
+Exception @ line: 1 - Options not entered.@ 10/07/2015 12:03:39
+Exception @ line: 1 - Options not entered.@ 10/07/2015 12:04:01
+Exception @ line: 1 - Options not entered.@ 10/07/2015 12:04:01
+Exception @ line: 1 - Options not entered.@ 10/07/2015 12:04:10
+Exception @ line: 1 - Options not entered.@ 10/07/2015 12:04:10
+Exception @ line: 1 - Options not entered.@ 10/07/2015 12:04:34
+Exception @ line: 1 - Options not entered.@ 10/07/2015 12:04:34
+Exception @ line: 1 - Options not entered.@ 10/07/2015 12:07:21
+Exception - Choice selection aborted-Color number outside range.@ 10/08/2015 18:40:56

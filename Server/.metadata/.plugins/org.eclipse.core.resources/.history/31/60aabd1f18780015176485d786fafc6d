@@ -1,0 +1,94 @@
+package database;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class EditDB extends Thread{
+	private DataBaseBasic db;
+	
+	public EditDB(){
+		/*Connect to database*/
+		db = new DataBaseBasic();
+		try {
+			db.setConn(db.getConnection());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		/*Create table*/
+		db.createTable();
+	}
+	/*Overriding run method*/
+	public void run() {
+		while(true) {
+			/*Print car*/
+			PrintAuto p = new PrintAuto();
+			p.printAutomobile("'FordZTW'");
+			String input;
+			Scanner in = new Scanner(System.in);
+			/*Update car*/
+			UpdateAuto u = new UpdateAuto();
+			/*Show records - Test 0*/
+			System.out.println("Do you want to display cars available in the record:Yes or No");
+			input = in.nextLine();
+			if(input.equalsIgnoreCase("Yes")) {
+				p.displayCarsAvailable();
+			}else{}
+			/*Test 1*/
+			System.out.println("Do you want to change Make/Model of the car:Yes or No");
+			input = in.nextLine();
+			if(input.equalsIgnoreCase("Yes")) {
+				System.out.println("Enter Old Car Name:");
+				String old = in.nextLine();
+				System.out.println("Enter New Car Name:");
+				String newCar = in.nextLine();
+				u.updateMakeName("'"+old+"'", "'"+newCar+"'");
+				p.printAutomobile("'"+newCar+"'");
+			}else{}
+			/*Test 2*/
+			System.out.println("Do you want to change Base Price of the car:Yes or No");
+			input = in.nextLine();
+			if(input.equalsIgnoreCase("Yes")) {
+				System.out.println("Enter Car Name:");
+				String old = in.nextLine();
+				System.out.println("Enter New Base Price:");
+				String price = in.nextLine();
+				u.updateBasePrice("'"+old+"'", "'"+price+"'");
+				p.printAutomobile("'"+old+"'");
+			}else{}
+			/*Test 3*/
+			System.out.println("Do you want to change Base Price of the car:Yes or No");
+			input = in.nextLine();
+			if(input.equalsIgnoreCase("Yes")) {
+				System.out.println("Enter Car Name:");
+				String old = in.nextLine();
+				System.out.println("Enter New Base Price:");
+				String price = in.nextLine();
+				u.updateBasePrice("'"+old+"'", "'"+price+"'");
+				p.printAutomobile("'"+old+"'");
+			}else{}
+			/*Test 4*/
+			System.out.println("Do you want to see Properties of a car:Yes or No");
+			input = in.nextLine();
+			if(input.equalsIgnoreCase("Yes")) {
+				System.out.println("Enter Car Name:");
+				String car = in.nextLine();
+				p.displayOptionSet(car);
+			}else{}
+			u.updateOptionSetName("'TeslaS'", "'Color'", "'Life'");
+			u.updateOptionName("'TeslaS'", "'Life'", "Red", "Gold");
+			u.updateOptionPrice("'TeslaS'", "'Life'", "Gold", "100");
+			p.printAutomobile("'TeslaS'");
+			/*Delete db*/
+			System.out.println("After deleting");
+			DeleteDB db = new DeleteDB();
+			db.deleteOption("'TeslaS'", "'Life'", "Blue");
+			p.printAutomobile("'TeslaS'");
+			db.deleteOptionSet("'TeslaS'", "'Life'");
+			p.printAutomobile("'TeslaS'");
+			/*db.deleteCarRecord("'TeslaS'");
+			p.printAutomobile("'TeslaS'");
+			db.deleteTable();*/
+		}
+	}
+}
