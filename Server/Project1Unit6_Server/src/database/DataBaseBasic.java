@@ -14,7 +14,7 @@ public class DataBaseBasic {
 	private final String userName = "root";
 
 	/** The password for the MySQL account*/
-	private final String password = "anil123";
+	private final String password = "xxxxx";
 
 	/** The name of the computer running MySQL */
 	private final String serverName = "localhost";
